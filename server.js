@@ -43,12 +43,9 @@ app.use('/images', (req, res, next) => {
 });
 
 // MongoDB Configuration
-const uri = process.env.MONGODB_URI || "mongodb+srv://abdulham33d:%402007Jim@bookstore.iuvbmmi.mongodb.net/bookstore";
-const client = new MongoClient(uri, {
-  tls: true,
-  tlsAllowInvalidCertificates: false,
-  serverSelectionTimeoutMS: 30000
-});
+// Use simple connection - let driver handle TLS automatically
+const uri = process.env.MONGODB_URI || "mongodb+srv://abdulham33d:%402007Jim@bookstore.iuvbmmi.mongodb.net/bookstore?retryWrites=true&w=majority";
+const client = new MongoClient(uri);
 
 let db;
 
