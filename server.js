@@ -44,7 +44,11 @@ app.use('/images', (req, res, next) => {
 
 // MongoDB Configuration
 const uri = process.env.MONGODB_URI || "mongodb+srv://abdulham33d:%402007Jim@bookstore.iuvbmmi.mongodb.net/bookstore";
-const client = new MongoClient(uri);
+const client = new MongoClient(uri, {
+  tls: true,
+  tlsAllowInvalidCertificates: false,
+  serverSelectionTimeoutMS: 30000
+});
 
 let db;
 
