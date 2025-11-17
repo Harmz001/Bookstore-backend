@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "68f360f1268255da787b558b",
+    "subject": "The Great Gatsby",
+    "location": "Fiction",
+    "price": 25,
+    "spaces": 5,
+    "emoji": "📚"
+  },
+  {
+    "_id": "68f360f1268255da787b558c",
+    "subject": "To Kill a Mockingbird",
+    "location": "Fiction",
+    "price": 30,
+    "spaces": 5,
+    "emoji": "📖"
+  },
+  {
+    "_id": "68f360f1268255da787b558d",
+    "subject": "The Art of Programming",
+    "location": "Technology",
+    "price": 45,
+    "spaces": 5,
+    "emoji": "💻"
+  },
+  {
+    "_id": "68f360f1268255da787b558e",
+    "subject": "Cooking Basics",
+    "location": "Lifestyle",
+    "price": 35,
+    "spaces": 4,
+    "emoji": "📖"
+  },
+  {
+    "_id": "68f360f1268255da787b558f",
+    "subject": "World History",
+    "location": "Education",
+    "price": 40,
+    "spaces": 5,
+    "emoji": "📚"
+  },
+  {
+    "_id": "68f360f1268255da787b5590",
+    "subject": "Poetry Collection",
+    "location": "Poetry",
+    "price": 20,
+    "spaces": 5,
+    "emoji": "📝"
+  },
+  {
+    "_id": "68f360f1268255da787b5591",
+    "subject": "Science Encyclopedia",
+    "location": "Education",
+    "price": 50,
+    "spaces": 5,
+    "emoji": "📚"
+  },
+  {
+    "_id": "68f360f1268255da787b5592",
+    "subject": "Mystery Tales",
+    "location": "Fiction",
+    "price": 28,
+    "spaces": 5,
+    "emoji": "📖"
+  },
+  {
+    "_id": "68f360f1268255da787b5593",
+    "subject": "Art & Design",
+    "location": "Art",
+    "price": 38,
+    "spaces": 5,
+    "emoji": "🎨"
+  },
+  {
+    "_id": "68f360f1268255da787b5594",
+    "subject": "Business Strategy",
+    "location": "Business",
+    "price": 42,
+    "spaces": 5,
+    "emoji": "📊"
+  }
+]

@@ -1,0 +1,230 @@
+{
+  "info": {
+    "name": "Bookstore API - CW1",
+    "description": "Complete API collection for Book Store backend - Full Stack Software App Development Coursework",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET All Books",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/books",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "books"]
+        },
+        "description": "Retrieve all books/lessons from the database. Returns array of books with subject, location, price, spaces, and emoji."
+      },
+      "response": []
+    },
+    {
+      "name": "GET Single Book",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/books/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "books", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "673879a3e7e8f5b4c0a1b2c3",
+              "description": "MongoDB ObjectId of the book"
+            }
+          ]
+        },
+        "description": "Retrieve a single book by its MongoDB ObjectId."
+      },
+      "response": []
+    },
+    {
+      "name": "POST Create Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"phone\": \"1234567890\",\n  \"books\": [\n    {\n      \"id\": \"673879a3e7e8f5b4c0a1b2c3\",\n      \"subject\": \"The Great Gatsby\",\n      \"price\": 25\n    },\n    {\n      \"id\": \"673879a3e7e8f5b4c0a1b2c4\",\n      \"subject\": \"To Kill a Mockingbird\",\n      \"price\": 30\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "orders"]
+        },
+        "description": "Create a new order with customer name, phone, and array of books. Decrements stock for ordered books."
+      },
+      "response": []
+    },
+    {
+      "name": "PUT Update Book Stock",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"spaces\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/books/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "books", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "673879a3e7e8f5b4c0a1b2c3",
+              "description": "MongoDB ObjectId of the book to update"
+            }
+          ]
+        },
+        "description": "Update the available stock/spaces for a book. Sets to exact number (not increment/decrement). Full 5% implementation!"
+      },
+      "response": []
+    },
+    {
+      "name": "GET Search Books - fiction",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/search?q=fiction",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "search"],
+          "query": [
+            {
+              "key": "q",
+              "value": "fiction",
+              "description": "Search query - searches across subject, location, price, and spaces"
+            }
+          ]
+        },
+        "description": "Search books across multiple fields (Challenge Component - 10%). Searches in subject, location, emoji, price, and spaces."
+      },
+      "response": []
+    },
+    {
+      "name": "GET Search Books - art",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/search?q=art",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "search"],
+          "query": [
+            {
+              "key": "q",
+              "value": "art",
+              "description": "Search for 'art' - finds Art & Design book"
+            }
+          ]
+        },
+        "description": "Search example showing partial matching. Finds books with 'art' anywhere in subject or location."
+      },
+      "response": []
+    },
+    {
+      "name": "GET Search Books - by price 25",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/search?q=25",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "search"],
+          "query": [
+            {
+              "key": "q",
+              "value": "25",
+              "description": "Search by price - finds books priced at $25"
+            }
+          ]
+        },
+        "description": "Search by numeric value. Searches price and spaces fields."
+      },
+      "response": []
+    },
+    {
+      "name": "GET Search Books - empty query",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/search?q=",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "search"],
+          "query": [
+            {
+              "key": "q",
+              "value": "",
+              "description": "Empty search returns all books"
+            }
+          ]
+        },
+        "description": "Empty search query returns all books from database."
+      },
+      "response": []
+    },
+    {
+      "name": "GET Static Image - exists",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/images/book1.txt",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["images", "book1.txt"]
+        },
+        "description": "Static file middleware - serves existing file. Middleware logs request and serves file."
+      },
+      "response": []
+    },
+    {
+      "name": "GET Static Image - not found",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/images/nonexistent.jpg",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["images", "nonexistent.jpg"]
+        },
+        "description": "Static file middleware - returns 404 JSON error when file doesn't exist. Demonstrates error handling."
+      },
+      "response": []
+    }
+  ]
+}
+
