@@ -42,12 +42,9 @@ app.use('/images', (req, res, next) => {
   });
 });
 
-// MongoDB Configuration - Stable setup for Node 16 + MongoDB 4.x
+// MongoDB Configuration
 const uri = process.env.MONGODB_URI || "mongodb+srv://abdulham33d:%402007Jim@bookstore.iuvbmmi.mongodb.net/bookstore?retryWrites=true&w=majority";
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+const client = new MongoClient(uri);
 
 let db;
 
