@@ -42,8 +42,8 @@ app.use('/images', (req, res, next) => {
   });
 });
 
-// MongoDB Configuration
-const uri = process.env.MONGODB_URI || "mongodb+srv://abdulham33d:%402007Jim@bookstore.iuvbmmi.mongodb.net/bookstore?retryWrites=true&w=majority";
+// MongoDB Configuration - NEW CLUSTER with working SSL
+const uri = process.env.MONGODB_URI || "mongodb+srv://abdulham33d:%402007Jim@bookstore.geykpp2.mongodb.net/bookstore?retryWrites=true&w=majority&appName=bookstore";
 const client = new MongoClient(uri);
 
 let db;
