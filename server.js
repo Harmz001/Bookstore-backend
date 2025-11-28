@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
-// MongoDB Configuration - GEYKPP2 CLUSTER ONLY!
+// MongoDB Configuration - GEYKPP2 CLUSTER
 const uri = "mongodb+srv://abdulham33d:%402007Jim@bookstore.geykpp2.mongodb.net/?appName=bookstore";
 const client = new MongoClient(uri);
 
