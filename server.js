@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
-// MongoDB Configuration - NEW CLUSTER (geykpp2)
+// MongoDB Configuration - WORKING CLUSTER
 const uri = "mongodb+srv://abdulham33d:%402007Jim@bookstore.geykpp2.mongodb.net/?appName=bookstore";
 const client = new MongoClient(uri);
 
@@ -62,8 +62,7 @@ app.post('/api/orders', async (req, res) => {
 
     const result = await db.collection('orders').insertOne(order);
     
-    // Stock is already decremented when adding to cart
-    // Do NOT decrement again here (double-decrement bug)
+    // Stock already decremented when adding to cart
 
     res.status(201).json({ 
       message: 'Order created successfully', 
