@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
 
-const uri = process.env.MONGODB_URI || 'mongodb+srv://abdulham33d:%402007Jim@bookstore.geykpp2.mongodb.net/?appName=bookstore'
+const uri = process.env.MONGODB_URI || 'mongodb+srv://abdulham33d:%402007Jim@bookstore.iuvbmmi.mongodb.net/?retryWrites=true&w=majority'
 
 const sampleBooks = [
   {
