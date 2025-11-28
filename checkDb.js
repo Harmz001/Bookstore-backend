@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 
-const uri = 'mongodb+srv://abdulham33d:%402007Jim@bookstore.geykpp2.mongodb.net/bookstore?retryWrites=true&w=majority&appName=bookstore';
+const uri = 'mongodb+srv://abdulham33d:%402007Jim@bookstore.iuvbmmi.mongodb.net/?retryWrites=true&w=majority';
 
 async function checkDatabase() {
   try {
