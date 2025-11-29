@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 const fs = require('fs');
 const path = require('path');
 
-const uri = "mongodb+srv://abdulham33d:%402007Jim@bookstore.iuvbmmi.mongodb.net/bookstore";
+const uri = "mongodb+srv://abdulham33d:%402007Jim@bookstore.geykpp2.mongodb.net/?appName=bookstore";
 
 async function exportCollections() {
   try {

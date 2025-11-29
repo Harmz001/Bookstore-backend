@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "Bookstore API - CW1",
-    "description": "Complete API collection for Book Store backend - Full Stack Software App Development Coursework",
+    "description": "Complete API collection for Book Store backend - Full Stack Software App Development Coursework | Deployed at: https://bookstore-backend-xd2r.onrender.com",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -11,10 +11,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/books",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
+          "raw": "https://bookstore-backend-xd2r.onrender.com/api/books",
+          "protocol": "https",
+          "host": ["bookstore-backend-xd2r", "onrender", "com"],
           "path": ["api", "books"]
         },
         "description": "Retrieve all books/lessons from the database. Returns array of books with subject, location, price, spaces, and emoji."
@@ -27,10 +26,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/books/:id",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
+          "raw": "https://bookstore-backend-xd2r.onrender.com/api/books/:id",
+          "protocol": "https",
+          "host": ["bookstore-backend-xd2r", "onrender", "com"],
           "path": ["api", "books", ":id"],
           "variable": [
             {
@@ -59,10 +57,9 @@
           "raw": "{\n  \"name\": \"John Doe\",\n  \"phone\": \"1234567890\",\n  \"books\": [\n    {\n      \"id\": \"673879a3e7e8f5b4c0a1b2c3\",\n      \"subject\": \"The Great Gatsby\",\n      \"price\": 25\n    },\n    {\n      \"id\": \"673879a3e7e8f5b4c0a1b2c4\",\n      \"subject\": \"To Kill a Mockingbird\",\n      \"price\": 30\n    }\n  ]\n}"
         },
         "url": {
-          "raw": "http://localhost:3000/api/orders",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
+          "raw": "https://bookstore-backend-xd2r.onrender.com/api/orders",
+          "protocol": "https",
+          "host": ["bookstore-backend-xd2r", "onrender", "com"],
           "path": ["api", "orders"]
         },
         "description": "Create a new order with customer name, phone, and array of books. Decrements stock for ordered books."
@@ -84,10 +81,9 @@
           "raw": "{\n  \"spaces\": 5\n}"
         },
         "url": {
-          "raw": "http://localhost:3000/api/books/:id",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
+          "raw": "https://bookstore-backend-xd2r.onrender.com/api/books/:id",
+          "protocol": "https",
+          "host": ["bookstore-backend-xd2r", "onrender", "com"],
           "path": ["api", "books", ":id"],
           "variable": [
             {
@@ -107,10 +103,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/search?q=fiction",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
+          "raw": "https://bookstore-backend-xd2r.onrender.com/api/search?q=fiction",
+          "protocol": "https",
+          "host": ["bookstore-backend-xd2r", "onrender", "com"],
           "path": ["api", "search"],
           "query": [
             {
@@ -130,10 +125,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/search?q=art",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
+          "raw": "https://bookstore-backend-xd2r.onrender.com/api/search?q=art",
+          "protocol": "https",
+          "host": ["bookstore-backend-xd2r", "onrender", "com"],
           "path": ["api", "search"],
           "query": [
             {
@@ -153,10 +147,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/search?q=25",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
+          "raw": "https://bookstore-backend-xd2r.onrender.com/api/search?q=25",
+          "protocol": "https",
+          "host": ["bookstore-backend-xd2r", "onrender", "com"],
           "path": ["api", "search"],
           "query": [
             {
@@ -176,10 +169,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/api/search?q=",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
+          "raw": "https://bookstore-backend-xd2r.onrender.com/api/search?q=",
+          "protocol": "https",
+          "host": ["bookstore-backend-xd2r", "onrender", "com"],
           "path": ["api", "search"],
           "query": [
             {
@@ -199,10 +191,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/images/book1.txt",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
+          "raw": "https://bookstore-backend-xd2r.onrender.com/images/book1.txt",
+          "protocol": "https",
+          "host": ["bookstore-backend-xd2r", "onrender", "com"],
           "path": ["images", "book1.txt"]
         },
         "description": "Static file middleware - serves existing file. Middleware logs request and serves file."
@@ -215,10 +206,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://localhost:3000/images/nonexistent.jpg",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "3000",
+          "raw": "https://bookstore-backend-xd2r.onrender.com/images/nonexistent.jpg",
+          "protocol": "https",
+          "host": ["bookstore-backend-xd2r", "onrender", "com"],
           "path": ["images", "nonexistent.jpg"]
         },
         "description": "Static file middleware - returns 404 JSON error when file doesn't exist. Demonstrates error handling."
